@@ -1,0 +1,70 @@
+	To DO:
+	
+	1. Bygg ett UI
+	2. Sätta in alla kort
+	3. Ge korten värden
+	4. Logik för vilka kort som får läggas vart
+	(Varannan färg på bordet KUNG-ESS, en färg i bashögarna ESS-KUNG) 
+	5. 4 Grundhögar, Kortlek, Dragna kort, 7 kolumner
+	6. Starta ett spel
+	7. Reseta spelet
+	8. CSS, utseendemässig
+
+	Eventuellt:
+	8. Lägga till olika typer av solitare, Klondike, Spider etc
+	9. Ångra?
+
+
+
+
+	Generate a deck of cards.
+Shuffle the deck.
+Create the initial Solitaire layout (7 columns and a foundation pile).
+Enable basic interactivity (moving cards between columns and piles).
+
+
+
+
+
+!!!!!!!!!!!1shuffla en kortlek
+göra objekt med information som gäller varje kort!!!!!!!!!!!!!!!!!!!!!!!!1
+
+
+
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// Create a standard deck of 52 cards
+function createDeck() {
+    const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
+    const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+    let deck = [];
+
+    for (let suit of suits) {
+        for (let rank of ranks) {
+            deck.push(`${rank} of ${suit}`);
+        }
+    }
+
+    return deck;
+}
+
+// Shuffle the deck using Fisher-Yates (Knuth) algorithm
+function shuffleDeck(deck) {
+    for (let i = deck.length - 1; i > 0; i--) {
+        // Pick a random index from 0 to i
+        const j = Math.floor(Math.random() * (i + 1));
+        
+        // Swap the elements at indices i and j
+        [deck[i], deck[j]] = [deck[j], deck[i]];
+    }
+}
+
+// Example usage:
+let deck = createDeck();  // Create a new deck of 52 cards
+console.log("Original Deck:", deck);
+
+shuffleDeck(deck);  // Shuffle the deck
+console.log("Shuffled Deck:", deck);
+

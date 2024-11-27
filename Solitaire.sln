@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4F92C931-2882-4E30-954C-614703436826}"
+	ProjectSection(SolutionItems) = preProject
+		HTMLPage1.html = HTMLPage1.html
+		Script1.js = Script1.js
+		StyleSheet1.css = StyleSheet1.css
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Img", "Img", "{078CA2FB-B5ED-410C-B2FC-5E8BD5FF677D}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\Spelkort\H2.png = ..\..\..\Desktop\Spelkort\H2.png
+		..\..\..\Desktop\Spelkort\H3.png = ..\..\..\Desktop\Spelkort\H3.png
+		..\..\..\Desktop\Spelkort\H4.png = ..\..\..\Desktop\Spelkort\H4.png
+		..\..\..\Desktop\Spelkort\H5.png = ..\..\..\Desktop\Spelkort\H5.png
+		..\..\..\Desktop\Spelkort\H6.png = ..\..\..\Desktop\Spelkort\H6.png
+		..\..\..\Desktop\Spelkort\H7.png = ..\..\..\Desktop\Spelkort\H7.png
+		..\..\..\Desktop\Spelkort\H8.png = ..\..\..\Desktop\Spelkort\H8.png
+		..\..\..\Desktop\Spelkort\H9.png = ..\..\..\Desktop\Spelkort\H9.png
+		..\..\..\Desktop\Spelkort\HA.png = ..\..\..\Desktop\Spelkort\HA.png
+		..\..\..\Desktop\Spelkort\HJ.png = ..\..\..\Desktop\Spelkort\HJ.png
+		..\..\..\Desktop\Spelkort\HK.png = ..\..\..\Desktop\Spelkort\HK.png
+		..\..\..\Desktop\Spelkort\HQ.png = ..\..\..\Desktop\Spelkort\HQ.png
+		..\..\..\Desktop\Spelkort\HT.png = ..\..\..\Desktop\Spelkort\HT.png
+		..\..\..\Desktop\Spelkort\K2.png = ..\..\..\Desktop\Spelkort\K2.png
+		..\..\..\Desktop\Spelkort\K3.png = ..\..\..\Desktop\Spelkort\K3.png
+		..\..\..\Desktop\Spelkort\K4.png = ..\..\..\Desktop\Spelkort\K4.png
+		..\..\..\Desktop\Spelkort\K5.png = ..\..\..\Desktop\Spelkort\K5.png
+		..\..\..\Desktop\Spelkort\K6.png = ..\..\..\Desktop\Spelkort\K6.png
+		..\..\..\Desktop\Spelkort\K7.png = ..\..\..\Desktop\Spelkort\K7.png
+		..\..\..\Desktop\Spelkort\K8.png = ..\..\..\Desktop\Spelkort\K8.png
+		..\..\..\Desktop\Spelkort\K9.png = ..\..\..\Desktop\Spelkort\K9.png
+		..\..\..\Desktop\Spelkort\KA.png = ..\..\..\Desktop\Spelkort\KA.png
+		..\..\..\Desktop\Spelkort\KJ.png = ..\..\..\Desktop\Spelkort\KJ.png
+		..\..\..\Desktop\Spelkort\KK.png = ..\..\..\Desktop\Spelkort\KK.png
+		..\..\..\Desktop\Spelkort\KQ.png = ..\..\..\Desktop\Spelkort\KQ.png
+		..\..\..\Desktop\Spelkort\KT.png = ..\..\..\Desktop\Spelkort\KT.png
+		..\..\..\Desktop\Spelkort\R2.png = ..\..\..\Desktop\Spelkort\R2.png
+		..\..\..\Desktop\Spelkort\R3.png = ..\..\..\Desktop\Spelkort\R3.png
+		..\..\..\Desktop\Spelkort\R4.png = ..\..\..\Desktop\Spelkort\R4.png
+		..\..\..\Desktop\Spelkort\R5.png = ..\..\..\Desktop\Spelkort\R5.png
+		..\..\..\Desktop\Spelkort\R6.png = ..\..\..\Desktop\Spelkort\R6.png
+		..\..\..\Desktop\Spelkort\R7.png = ..\..\..\Desktop\Spelkort\R7.png
+		..\..\..\Desktop\Spelkort\R8.png = ..\..\..\Desktop\Spelkort\R8.png
+		..\..\..\Desktop\Spelkort\R9.png = ..\..\..\Desktop\Spelkort\R9.png
+		..\..\..\Desktop\Spelkort\RA.png = ..\..\..\Desktop\Spelkort\RA.png
+		..\..\..\Desktop\Spelkort\RJ.png = ..\..\..\Desktop\Spelkort\RJ.png
+		..\..\..\Desktop\Spelkort\RK.png = ..\..\..\Desktop\Spelkort\RK.png
+		..\..\..\Desktop\Spelkort\RQ.png = ..\..\..\Desktop\Spelkort\RQ.png
+		..\..\..\Desktop\Spelkort\RT.png = ..\..\..\Desktop\Spelkort\RT.png
+		..\..\..\Desktop\Spelkort\S2.png = ..\..\..\Desktop\Spelkort\S2.png
+		..\..\..\Desktop\Spelkort\S3.png = ..\..\..\Desktop\Spelkort\S3.png
+		..\..\..\Desktop\Spelkort\S4.png = ..\..\..\Desktop\Spelkort\S4.png
+		..\..\..\Desktop\Spelkort\S5.png = ..\..\..\Desktop\Spelkort\S5.png
+		..\..\..\Desktop\Spelkort\S6.png = ..\..\..\Desktop\Spelkort\S6.png
+		..\..\..\Desktop\Spelkort\S7.png = ..\..\..\Desktop\Spelkort\S7.png
+		..\..\..\Desktop\Spelkort\S8.png = ..\..\..\Desktop\Spelkort\S8.png
+		..\..\..\Desktop\Spelkort\S9.png = ..\..\..\Desktop\Spelkort\S9.png
+		..\..\..\Desktop\Spelkort\SA.png = ..\..\..\Desktop\Spelkort\SA.png
+		..\..\..\Desktop\Spelkort\SJ.png = ..\..\..\Desktop\Spelkort\SJ.png
+		..\..\..\Desktop\Spelkort\SK.png = ..\..\..\Desktop\Spelkort\SK.png
+		..\..\..\Desktop\Spelkort\SQ.png = ..\..\..\Desktop\Spelkort\SQ.png
+		..\..\..\Desktop\Spelkort\ST.png = ..\..\..\Desktop\Spelkort\ST.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
