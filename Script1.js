@@ -47,7 +47,6 @@ function displayDeck(deck, containerId) {
     });
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const solitaireDeck = generateSolitaireDeck(); 
 
@@ -62,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    
     if (shuffleButton) {
         shuffleButton.addEventListener("click", () => {
             const shuffledDeck = shuffleDeck([...solitaireDeck]); 
