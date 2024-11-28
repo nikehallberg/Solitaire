@@ -2,24 +2,22 @@
 function generateSolitaireDeck() {
     const suits = ['H', 'K', 'R', 'S'];
     const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'];
-    const cardList = {
-        A: 1, T: 10, J: 11, Q: 12, K: 13,
-        2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9
+    const cardValues = {
+        'A': 1, '2': 2, '3': 3, '4': 4, '5': 5,
+        '6': 6, '7': 7, '8': 8, '9': 9, 'T': 10,
+        'J': 11, 'Q': 12, 'K': 13
     };
-    const deck = [];
-    suits.forEach(suit => {
-        ranks.forEach(rank => {
-            deck.push({
-                suit,
-                rank,
-                value: cardList[rank],
-                card: `images/${suit}${rank}.png` 
-            });
-        });
-    });
-    return deck;
-}
 
+
+    return suits.flatMap(suit =>
+        ranks.map(rank => ({
+            suit,
+            rank,
+            value: cardValues[rank],
+            card: `C:/Users/nikeh/Desktop/Spelkort/${suit}${rank}.png`
+        }))
+    );
+}
 function shuffleDeck(deck) {
     for (let i = deck.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -30,7 +28,9 @@ function shuffleDeck(deck) {
 
 function displayDeck(deck, containerId) {
     const container = document.getElementById(containerId);
-    container.innerHTML = "";
+    if (!container) return; // Safety check
+    container.innerHTML = ""; // Clear container
+
     deck.forEach(card => {
         const cardElement = document.createElement("div");
         cardElement.classList.add("card");
@@ -42,6 +42,25 @@ function displayDeck(deck, containerId) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const solitaireDeck = generateSolitaireDeck();
+    displayDeck(solitaireDeck, "deckContainer");
+
+    const shuffleButton = document.getElementById("shuffleButton");
+    if (shuffleButton) {
+        shuffleButton.addEventListener("click", () => {
+            shuffleDeck(solitaireDeck);
+            displayDeck(solitaireDeck, "deckContainer");
+        });
+    }
+
+    const startButton = document.querySelector(".start");
+    if (startButton) {
+        startButton.addEventListener("click", () => {
+            displayDeck(solitaireDeck, "deckContainer");
+        });
+    }
+});
 
 const solitaireDeck = generateSolitaireDeck();
 document.querySelector(".start").addEventListener("click", () => {
@@ -56,13 +75,15 @@ const shuffledDeck = shuffleDeck(solitaireDeck);
 
 function displayDeck(deck, containerId) {
     const container = document.getElementById(containerId);
+    if (!container) return; 
     container.innerHTML = ""; 
 
     deck.forEach(card => {
         const cardElement = document.createElement("div");
         cardElement.classList.add("card");
         const img = document.createElement("img");
-        img.src = card.card; 
+        img.src = card.card;
+        img.alt = `Card ${card.rank} of ${card.suit}`;
         cardElement.appendChild(img);
         container.appendChild(cardElement);
     });
