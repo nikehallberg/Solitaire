@@ -15,23 +15,19 @@ p {
     height: 120px;
     overflow: auto;
 }
-.card {
-    display: inline-block;
-    margin: 5px;
-}
-
-.card img {
-    width: 100px;
-    max-width: 100px;
-    height: auto;
-    object-fit: contain;
-}
-
 #deckContainer {
-    display: none; 
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px;
 }
+
+.card {
+    margin-right: 5px;
+}
+
 .card img {
-    width: 100%; 
-    max-width: 100px; 
-    
+    height: 150px; 
+    width: auto; 
 }
+
