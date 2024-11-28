@@ -12,7 +12,7 @@ function generateSolitaireDeck() {
             suit,
             rank,
             value: cardValues[rank],
-            card: `cards/${suit}${rank}.png`
+            card: `C:/Users/nikeh/Desktop/Spelkort/${suit}${rank}.png`
         }))
     );
 }
@@ -28,20 +28,25 @@ function shuffleDeck(deck) {
 function displayDeck(deck, containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
-    container.innerHTML = ""; 
 
+    container.innerHTML = "";  
+
+    container.style.display = "flex";
+    container.style.flexWrap = "nowrap";  
+    container.style.overflowX = "auto";  
     deck.forEach(card => {
         const cardElement = document.createElement("div");
         cardElement.classList.add("card");
+
         const img = document.createElement("img");
         img.src = card.card;
-        img.alt = `Card ${card.rank} of ${card.suit}`;
+        img.alt = `Card ${card.rank} of ${card.suit}`;  
+        img.style.marginRight = "5px"; 
         cardElement.appendChild(img);
-        container.appendChild(cardElement);
+        container.appendChild(cardElement); 
     });
-
-    container.style.display = "grid";
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const solitaireDeck = generateSolitaireDeck(); 
