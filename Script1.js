@@ -1,4 +1,3 @@
-
 function generateSolitaireDeck() {
     const suits = ['H', 'K', 'R', 'S'];
     const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'];
@@ -8,16 +7,16 @@ function generateSolitaireDeck() {
         'J': 11, 'Q': 12, 'K': 13
     };
 
-
     return suits.flatMap(suit =>
         ranks.map(rank => ({
             suit,
             rank,
             value: cardValues[rank],
-            card: `C:/Users/nikeh/Desktop/Spelkort/${suit}${rank}.png`
+            card: `cards/${suit}${rank}.png`
         }))
     );
 }
+
 function shuffleDeck(deck) {
     for (let i = deck.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -28,54 +27,7 @@ function shuffleDeck(deck) {
 
 function displayDeck(deck, containerId) {
     const container = document.getElementById(containerId);
-    if (!container) return; // Safety check
-    container.innerHTML = ""; // Clear container
-
-    deck.forEach(card => {
-        const cardElement = document.createElement("div");
-        cardElement.classList.add("card");
-        const img = document.createElement("img");
-        img.src = card.card;
-        img.alt = `Card ${card.rank} of ${card.suit}`;
-        cardElement.appendChild(img);
-        container.appendChild(cardElement);
-    });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const solitaireDeck = generateSolitaireDeck();
-    displayDeck(solitaireDeck, "deckContainer");
-
-    const shuffleButton = document.getElementById("shuffleButton");
-    if (shuffleButton) {
-        shuffleButton.addEventListener("click", () => {
-            shuffleDeck(solitaireDeck);
-            displayDeck(solitaireDeck, "deckContainer");
-        });
-    }
-
-    const startButton = document.querySelector(".start");
-    if (startButton) {
-        startButton.addEventListener("click", () => {
-            displayDeck(solitaireDeck, "deckContainer");
-        });
-    }
-});
-
-const solitaireDeck = generateSolitaireDeck();
-document.querySelector(".start").addEventListener("click", () => {
-    displayDeck(solitaireDeck, "deckContainer");
-});
-document.getElementById("shuffleButton").addEventListener("click", () => {
-    const shuffledDeck = shuffleDeck(solitaireDeck);
-    displayDeck(shuffledDeck, "deckContainer");
-});
-
-const shuffledDeck = shuffleDeck(solitaireDeck);
-
-function displayDeck(deck, containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return; 
+    if (!container) return;
     container.innerHTML = ""; 
 
     deck.forEach(card => {
@@ -87,11 +39,29 @@ function displayDeck(deck, containerId) {
         cardElement.appendChild(img);
         container.appendChild(cardElement);
     });
+
+    container.style.display = "grid";
 }
 
-displayDeck(solitaireDeck, "deckContainer");
+document.addEventListener("DOMContentLoaded", () => {
+    const solitaireDeck = generateSolitaireDeck(); 
 
-document.getElementById("shuffleButton").addEventListener("click", () => {
-    solitaireDeck = shuffleDeck(solitaireDeck);
-    displayDeck(solitaireDeck, "deckContainer");
-})
+    const deckContainer = document.getElementById("deckContainer");
+    const shuffleButton = document.getElementById("shuffleButton");
+    const startButton = document.querySelector(".start");
+
+    
+    if (startButton) {
+        startButton.addEventListener("click", () => {
+            displayDeck(solitaireDeck, "deckContainer"); 
+        });
+    }
+
+    
+    if (shuffleButton) {
+        shuffleButton.addEventListener("click", () => {
+            const shuffledDeck = shuffleDeck([...solitaireDeck]); 
+            displayDeck(shuffledDeck, "deckContainer");
+        });
+    }
+});

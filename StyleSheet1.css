@@ -22,10 +22,16 @@ p {
 
 .card img {
     width: 100px;
+    max-width: 100px;
     height: auto;
+    object-fit: contain;
 }
+
 #deckContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none; 
+}
+.card img {
+    width: 100%; 
+    max-width: 100px; 
+    
 }
