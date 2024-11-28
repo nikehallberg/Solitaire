@@ -4,12 +4,12 @@ function generateSolitaireDeck() {
     const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'];
     const deck = [];
 
-    suits.forEach(suit => {
-        ranks.forEach(rank => {
+    suits.forEach(suits => {
+        ranks.forEach(ranks => {
             deck.push({
-                suit,
-                rank,
-                card: `C:\\Users\\nikeh\\Desktop\\Spelkort\\${suit}${rank}.png`
+                suits,
+                ranks,
+                card: `C:\\Users\\nikeh\\Desktop\\Spelkort\\${suits}${ranks}.png`
             });
         });
     });
@@ -36,6 +36,34 @@ const cardList = [
 
 const card = () => `C:\Users\nikeh\Desktop\Spelkort\\${suits}${ranks}.png`
 
-function shuffleDeck() {
-
+function shuffleDeck(deck) {
+    for (let i = deck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [deck[i], deck[j]] = [deck[j], deck[i]]; 
+    }
+    return deck;
 }
+const solitaireDeck = generateSolitaireDeck();
+const shuffledDeck = shuffleDeck(solitaireDeck);
+
+function displayDeck(deck, containerId) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = ""; 
+
+    deck.forEach(card => {
+        const cardElement = document.createElement("div");
+        cardElement.classList.add("card");
+        const img = document.createElement("img");
+        img.src = card.card; 
+        cardElement.appendChild(img);
+        container.appendChild(cardElement);
+    });
+}
+
+let solitaireDeck = generateSolitaireDeck();
+displayDeck(solitaireDeck, "deckContainer");
+
+document.getElementById("shuffleButton").addEventListener("click", () => {
+    solitaireDeck = shuffleDeck(solitaireDeck);
+    displayDeck(solitaireDeck, "deckContainer");
+})
