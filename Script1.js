@@ -3,6 +3,12 @@ function generateSolitaireDeck() {
     const suits = ['H', 'K', 'R', 'S'];
     const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'];
     const deck = [];
+
+    suits.forEach(suit => {
+        ranks.forEach(rank => {
+            deck.push({ suit, rank, cards() });
+        });
+    });
 }
 
 const cardList = [
