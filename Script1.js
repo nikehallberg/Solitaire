@@ -6,9 +6,15 @@ function generateSolitaireDeck() {
 
     suits.forEach(suit => {
         ranks.forEach(rank => {
-            deck.push({ suit, rank, cards() });
+            deck.push({
+                suit,
+                rank,
+                card: `C:\\Users\\nikeh\\Desktop\\Spelkort\\${suit}${rank}.png`
+            });
         });
     });
+
+    return deck;
 }
 
 const cardList = [
@@ -28,7 +34,7 @@ const cardList = [
 
 ]
 
-const cards = () => `C:\Users\nikeh\Desktop\Spelkort\\${suits}${ranks}.png`
+const card = () => `C:\Users\nikeh\Desktop\Spelkort\\${suits}${ranks}.png`
 
 function shuffleDeck() {
 
