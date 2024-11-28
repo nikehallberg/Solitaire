@@ -28,6 +28,7 @@ Enable basic interactivity (moving cards between columns and piles).
 
 !!!!!!!!!!!1shuffla en kortlek
 göra objekt med information som gäller varje kort!!!!!!!!!!!!!!!!!!!!!!!!1
+gör en lista med objekt, text värde mm
 
 
 
