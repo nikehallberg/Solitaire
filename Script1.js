@@ -1,3 +1,18 @@
+const pile1 = document.getElementById('pile1');
+const pile2 = document.getElementById('pile2');
+const pile3 = document.getElementById('pile3');
+const pile4 = document.getElementById('pile4');
+const pile5 = document.getElementById('pile5');
+const pile6 = document.getElementById('pile6');
+const pile7 = document.getElementById('pile7');
+
+const hearts = document.getElementById('hearts');
+const diamonds = document.getElementById('diamonds');
+const clubs = document.getElementById('clubs');
+const spades = document.getElementById('spades');
+
+const discard = document.getElementById('discardpile');
+
 function generateSolitaireDeck() {
     const suits = ['H', 'K', 'R', 'S'];
     const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'];
